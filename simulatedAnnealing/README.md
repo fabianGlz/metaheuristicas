@@ -30,3 +30,15 @@ Estos algoritmos optimizan la función de coste explorando la vecindad del punto
 
 En las siguientes definiciones consideramos (S, f ) una instanciación de un problema de optimización combinatoria (S: conjunto de soluciones factibles, f : función objetivo). 
  
+ 🎈 Acontinuación se muestran la definiciones formales sin traducción
+ 
+ ![Figura 2](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama2.PNG)
+ ![Figura 4](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama4.PNG)
+ 
+ Un algoritmo de búsqueda local es un algoritmo iterativo que comienza su búsqueda desde un punto factible, dibujado aleatoriamente en el espacio de estados. A continuación, se aplica sucesivamente un mecanismo de generación para encontrar una solución mejor (en términos de valor de la función objetivo), explorando la vecindad de la solución actual. Si se encuentra dicha solución, se convierte en la solución actual. El algoritmo finaliza cuando no se encuentra ninguna mejora, y la solución actual se considera la solución aproximada del problema de optimización. Se puede resumir el algoritmo con el siguiente pseudocódigo para un problema de minimización:
+ 
+![Figura 3](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama3.PNG)
+![Figura 5](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama5.PNG)
+
+Así, por definición, los algoritmos de búsqueda local convergen a los óptimos locales a menos que se tenga una estructura de vecindad exacta. Esta noción de vecindad exacta es teórica porque en la práctica suele llevar a recurrir a una enumeración completa del espacio de búsqueda.
+ 
