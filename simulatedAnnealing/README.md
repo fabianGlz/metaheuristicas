@@ -77,6 +77,17 @@ A continuación, se introduce un parámetro de control c, que actúa como temper
 
 ![Figura 9](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama9.PNG)
 
+donde c es el parámetro de control.
+Por analogía, el principio de generación de un vecino corresponde al mecanismo de perturbación del algoritmo de Metrópolis, y el principio de aceptación representa el criterio de Metropolis.
+
+![Figura 10](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama10.PNG)
+
+En la siguiente sección, ck es el valor del parámetro de temperatura, y Lk es el número de transiciones generadas en una iteración k, el número de transiciones generadas en una iteración k. 
+
+El SA puede resumirse como sigue
+
+![Figura 11](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama11.PNG)
+
 
 
     
