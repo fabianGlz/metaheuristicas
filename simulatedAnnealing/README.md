@@ -1,4 +1,4 @@
-# Simulated Annealing
+# Simulated Annealing :exclamation:
 
 ## 1 Introducción
  El Recocido Simulado (SA) es uno de los métodos meta-heurísticos más sencillos y conocidos para abordar la difícil optimización global de caja negra.
