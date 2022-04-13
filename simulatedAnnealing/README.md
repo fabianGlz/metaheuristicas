@@ -17,3 +17,5 @@ En la fase líquida, las partículas se distribuyen al azar. Se ha demostradoque
 
 Si no es así, el sólido se encontrará en un estado metaestable con energía no mínima; esto se denomina endurecimiento, que consiste en el enfriamiento repentino
 de un sólido.
+
+![Diagrama 1](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama1.PNG)
