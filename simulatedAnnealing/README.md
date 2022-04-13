@@ -18,4 +18,15 @@ En la fase líquida, las partículas se distribuyen al azar. Se ha demostradoque
 Si no es así, el sólido se encontrará en un estado metaestable con energía no mínima; esto se denomina endurecimiento, que consiste en el enfriamiento repentino
 de un sólido.👨‍🚀
 
-![Diagrama 1](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama1.PNG)
+![Figura 1](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama1.PNG)
+
+Figura 1: Cuando la temperatura es alta, el material se encuentra en estado líquido (izquierda). En un proceso de endurecimiento, el material alcanza un estado sólido con energía no mínima (estado metaestable; arriba a la derecha). En este caso, la estructura de los átomos no tiene simmetría. Durante un proceso de recocido lento, el material alcanza también un estado sólido pero en el que los átomos se organizan con simetría (cristal; abajo a la derecha).
+
+❗ Antes de describir el algoritmo de recocido simulado para la optimización necesitamos introducir los principios de los algoritmos de optimización de búsqueda local, de los cuales el recocido simulado es una extensión.
+
+### ⭐ 2.1 Local search (or Monte Carlo) algorithms
+
+Estos algoritmos optimizan la función de coste explorando la vecindad del punto actual en el espacio de soluciones.
+
+En las siguientes definiciones consideramos (S, f ) una instanciación de un problema de optimización combinatoria (S: conjunto de soluciones factibles, f : función objetivo). 
+ 
