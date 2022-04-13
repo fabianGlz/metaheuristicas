@@ -16,6 +16,6 @@ A principios de los años 80, tres investigadores de IBM, Kirkpatrick, Gelatt y 
 En la fase líquida, las partículas se distribuyen al azar. Se ha demostradoque el estado de energía mínima se alcanza siempre que la temperatura inicial sea lo suficientemente alta y el tiempo de enfriamiento sea lo suficientemente largo.
 
 Si no es así, el sólido se encontrará en un estado metaestable con energía no mínima; esto se denomina endurecimiento, que consiste en el enfriamiento repentino
-de un sólido.
-👨‍🚀
+de un sólido.👨‍🚀
+
 ![Diagrama 1](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama1.PNG)
