@@ -46,4 +46,37 @@ Intuitivamente, si la solución actual "cae" en un subdominio sobre el que la fu
 Para evitar quedar atrapado en mínimos locales, es necesario entonces definir un proceso susceptible de aceptar transiciones de estado actuales que reduzcan momentáneamente el rendimiento (en términos de objetivo) de la solución actual: este es el principio fundamental de la función de recocido simulado, tal que antes de describir este algoritmo, es necesario introducir el algoritmo de Metrópolis [15] que es un componente básico de SA.
 
 
+### ⭐ 2.2 Metropolis Algorithm
+
+En 1953, tres investigadores estadounidenses (Metropolis, Rosenbluth y Teller [15]) desarrollaron un algoritmo para simular el recocido físico, como se describe en
+sección 2. Su objetivo era reproducir fielmente la evolución de la estructura física de un material sometido a recocido.
+
+Este algoritmo se basa en técnicas de Monte Carlo, que consiste en generar una secuencia de estados de del sólido de la siguiente manera.
+
+Partiendo de un estado inicial i de energía Ei, se genera un nuevo estado j de energía E j generada modificando la posición de una partícula. Si la diferencia de energía, Ei - E j, es positiva (el nuevo estado presenta menor energía), el estado j se convierte en el nuevo estado actual. Si la diferencia de energía es menor o igual a cero, la probabilidad de que el estado j se convierta en el estado actual viene dada por:
+
+![Figura 6](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama6.PNG)
+
+donde T representa la temperatura del sólido y kB es la constante de Boltzman (kB = 1,38 × 10-23 joule/Kelvin).
+El criterio de aceptación del nuevo estado se denomina criterio de Metrópolis. Si el enfriamiento se realiza con suficiente lentitud, el sólido alcanza un estado de equilibrio a cada temperatura dada T . En el algoritmo de Metropolis este equilibrio se consigue generando un gran número de transiciones a
+cada temperatura. El equilibrio térmico se caracteriza por la distribución estadística de Boltzmann. Esta distribución da la probabilidad de que el sólido se encuentre en el estado i de energía Ei a la temperatura T :
+
+![Figura 7](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama7.PNG)
+
+donde X es una variable aleatoria asociada al estado actual del sólido y Z(T ) es un coeficiente de normalización, definido como:
+![Figura 8](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama8.PNG)
+
+### ⭐ 2.3 Simulated annealing (SA) algorithm
+
+En el algoritmo SA, se aplica el algoritmo de Metrópolis para generar una secuencia de soluciones en el espacio de estados S. Para ello, se hace una analogía entre un sistema multipartícula y nuestro problema de optimización utilizando las siguientes equivalencias:
+
+- Los puntos del espacio de estados representan los posibles estados del sólido;
+- La función a minimizar representa la energía del sólido.
+
+A continuación, se introduce un parámetro de control c, que actúa como temperatura. Este parámetro se expresa con las mismas unidades que el objetivo que se optimiza. También se supone que el usuario proporciona para cada punto del espacio de estados, una vecindad y un mecanismo para generar una solución en esta vecindad. A continuación, definimos el principio de aceptación :
+
+![Figura 9](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama9.PNG)
+
+
+
 
