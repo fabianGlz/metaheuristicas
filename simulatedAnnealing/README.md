@@ -88,6 +88,11 @@ El SA puede resumirse como sigue
 
 ![Figura 11](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama11.PNG)
 
+Una de las principales características del recocido simulado es su capacidad para aceptar transiciones que degradan la función objetivo.
+Al principio del proceso, el valor de la temperatura ck es alto lo que permite aceptar transiciones con una alta degradación del objetivo y, por tanto, explorar a fondo el espacio de estados. A medida que ck disminuye sólo se aceptan las transiciones que mejoran el objetivo, o con un bajo deterioro del objetivo. Por último, cuando ck tiende a cero, no se acepta ningún deterioro del objetivo, y el algoritmo SA se comporta como un algoritmo de Monte Carlo.
+
+![Figura 12](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama12.PNG)
+
 
 
     
