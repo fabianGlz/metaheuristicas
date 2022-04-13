@@ -42,3 +42,8 @@ En las siguientes definiciones consideramos (S, f ) una instanciación de un pro
 
 Así, por definición, los algoritmos de búsqueda local convergen a los óptimos locales a menos que se tenga una estructura de vecindad exacta. Esta noción de vecindad exacta es teórica porque en la práctica suele llevar a recurrir a una enumeración completa del espacio de búsqueda.
  
+Intuitivamente, si la solución actual "cae" en un subdominio sobre el que la función objetivo es convexa, el algoritmo queda atrapado en este sub-dominio, a menos que la estructura de vecindad asociada con el mecanismo de generación pueda alcanzar puntos fuera de este subdominio.
+Para evitar quedar atrapado en mínimos locales, es necesario entonces definir un proceso susceptible de aceptar transiciones de estado actuales que reduzcan momentáneamente el rendimiento (en términos de objetivo) de la solución actual: este es el principio fundamental de la función de recocido simulado, tal que antes de describir este algoritmo, es necesario introducir el algoritmo de Metrópolis [15] que es un componente básico de SA.
+
+
+
