@@ -2,25 +2,27 @@
 
 ## 1 Introducción
  El Recocido Simulado (SA) es uno de los métodos meta-heurísticos más sencillos y conocidos para abordar la difícil optimización global de caja negra.
-heurístico para abordar los difíciles problemas de optimización global de caja negra (aquellos cuya función objetivo no está dada explícitamente y sólo puede evaluarse mediante una costosa simulación informática).  
+ (aquellos cuya función objetivo no está dada explícitamente y sólo puede evaluarse mediante una costosa simulación).  
 
 ## Conceptos básicos
 
-A principios de los años 80, tres investigadores de IBM, Kirkpatrick, Gelatt y Vecchi [12] introdujeron los conceptos de recocido en la optimización combinatoria. Estos conceptos   se basan en una fuerte analogía con el recocido físico de los materiales. Este proceso consiste en llevar un sólido a un estado de baja energía tras
- después de aumentar su temperatura. Se puede resumir en las dos etapas siguientes
+A principios de los años 80, tres investigadores de IBM, Kirkpatrick, Gelatt y Vecchi [12] introdujeron los conceptos de recocido en la optimización combinatoria. Estos conceptos se basan en una fuerte analogía con el recocido físico de los materiales. Este proceso consiste en llevar un sólido a un estado de baja energía tras
+ después de aumentar su temperatura. 
+ Se puede resumir en las dos etapas siguientes
  
 - Llevar el sólido a una temperatura muy alta hasta la "fusión" de la estructura;
 - Enfriar el sólido según un esquema muy particular de disminución de la temperatura para alcanzar un estado sólido de mínima energía.
 
 
-En la fase líquida, las partículas se distribuyen al azar. Se ha demostradoque el estado de energía mínima se alcanza siempre que la temperatura inicial sea lo suficientemente alta y el tiempo de enfriamiento sea lo suficientemente largo.
+En la fase líquida, las partículas se distribuyen al azar. Se ha demostrado que el estado de energía mínima se alcanza siempre que la temperatura inicial sea lo suficientemente alta y el tiempo de enfriamiento sea lo suficientemente largo.
 
 Si no es así, el sólido se encontrará en un estado metaestable con energía no mínima; esto se denomina endurecimiento, que consiste en el enfriamiento repentino
 de un sólido.👨‍🚀
 
 ![Figura 1](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama1.PNG)
 
-Figura 1: Cuando la temperatura es alta, el material se encuentra en estado líquido (izquierda). En un proceso de endurecimiento, el material alcanza un estado sólido con energía no mínima (estado metaestable; arriba a la derecha). En este caso, la estructura de los átomos no tiene simmetría. Durante un proceso de recocido lento, el material alcanza también un estado sólido pero en el que los átomos se organizan con simetría (cristal; abajo a la derecha).
+Figura 1: Cuando la temperatura es alta, el material se encuentra en estado líquido (izquierda). En un proceso de endurecimiento, el material alcanza un estado sólido con energía no mínima (estado metaestable; arriba a la derecha). En este caso, la estructura de los átomos no tiene simmetría.
+Durante un proceso de recocido lento, el material alcanza también un estado sólido pero en el que los átomos se organizan con simetría (cristal; abajo a la derecha).
 
 ❗ Antes de describir el algoritmo de recocido simulado para la optimización necesitamos introducir los principios de los algoritmos de optimización de búsqueda local, de los cuales el recocido simulado es una extensión.
 
@@ -30,7 +32,7 @@ Estos algoritmos optimizan la función de coste explorando la vecindad del punto
 
 En las siguientes definiciones consideramos (S, f ) una instanciación de un problema de optimización combinatoria (S: conjunto de soluciones factibles, f : función objetivo). 
  
- 🎈 Acontinuación se muestran la definiciones formales sin traducción
+ 🎈 Acontinuación se muestran la definiciones formales sin traducción tomadas textualmente de la bibliografia.
  
  ![Figura 2](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama2.PNG)
  ![Figura 4](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama4.PNG)
@@ -93,6 +95,28 @@ Al principio del proceso, el valor de la temperatura ck es alto lo que permite a
 
 ![Figura 12](https://github.com/armaFab/metaheuristicas/blob/main/simulatedAnnealing/images/diagrama12.PNG)
 
+
+# 🆎Bibliografía 
+[1] E. Aarts and J. Korst. Simulated Annealing and Boltzmann Machines:A Stochastic Approach to Combinatorial Optimization and Neural Computing. Wiley, NY, USA, 1989.
+
+[2] E. Aarts and P. Van Laarhoven. A new polynomial time cooling schedule. In Proceedings of the IEEE International Conference on Computer-Aided Design, Santa Clara, pages 206–208.
+
+[3] E. Aarts and P. Van Laarhoven. Statistical cooling : A general approach to combinatorial problems. Philips Journal of Research, 40:193–226, 1985.
+
+[4] H. Bayram and R. Sahin. A new simulated annealing approach for travelling salesman problem. Mathematical and Computational Applications, 18(3):313–322, 2013.
+
+[5] S. Chaimatanan, D. Delahaye, and M. Mongeau. A hybrid metaheuristic optimization algorithm for strategic planning of 4D aircraft trajec- tories at the continental scale. IEEE Computational Intelligence Magazine, 9(4):46–61, 2014.
+
+[6] M. Chams, A. Hertz, and D. de Werra. Some experiments with simulated annealing for coloring graphs. European Journal of Operational Research, 32(2):260 – 266, 1987.
+
+[7] Y. Crama and M. Schyns. Simulated annealing for complex portfolio selection problems. European Journal of Operational Research, 150(3):546–571, 2003.
+
+[8] T. Emden-Weiner and M. Proksch. Best practice simulated annealing for the airline crew scheduling problem. Journal of Heuristics, 5(4):419–436, 1999.
+
+[9] R. Hanafi and E Kozan. A hybrid constructive heuristic and simulated annealing for railway crew scheduling. Computers & Industrial Engi- neering, 70:11–19, 2014.
+[10] A. Islami, S. Chaimatanan, and D. Delahaye. Large-scale 4D trajec tory planning. In Electronic Navigation Research Institute, editor, Air Traffic Management and Systems II, volume 420 of Lecture Notes in Electrical Engineering, pages 27–47. Springer Japan, 2017.
+
+[11] S. Kirkpatrick, C.D. Gelatt, and M.P. Vecchi. Optimization by simulated annealing. Science, 220(4598):671, 1983. 42
 
 
     
