@@ -4,7 +4,7 @@ window.onload = function () {
     let arrayCities;
     let run;
     let wFrame = 600;
-    let hFrame = 550;
+    let hFrame = 600;
     let xFrame = 0;
     let yFrame = 0;
     let set = document.getElementById('set-cities');
@@ -37,23 +37,27 @@ function paintCities(arrayCities, ctx, xFrame, yFrame, wFrame, hFrame) {
     cleanScreen(ctx, xFrame, yFrame, wFrame, hFrame);
 
     for (let i = 0; i < arrayCities.length; i++) {
-        ctx.beginPath()
-        ctx.fillStyle = "blue";
-        ctx.arc(arrayCities[i].X, arrayCities[i].Y, r, 0, 2 * Math.PI);
-        
-        ctx.closePath();
-        ctx.fill();
-        for (let j = 1; j < arrayCities.length-1; j++) {
+
+        for (let j = 1; j < arrayCities.length - 1; j++) {
             ctx.beginPath()
             ctx.strokeStyle = "green";
-             
             ctx.moveTo(arrayCities[i].X, arrayCities[i].Y);
             ctx.lineTo(arrayCities[j].X, arrayCities[j].Y);
             ctx.closePath();
-             
             ctx.stroke();
 
         }
+
+    }
+    for (let i = 0; i < arrayCities.length; i++) {
+
+
+        if (i == 0 || i == arrayCities.length - 1) { ctx.fillStyle = "white"; }
+        else { ctx.fillStyle = "blue"; }
+        ctx.beginPath();
+        ctx.arc(arrayCities[i].X, arrayCities[i].Y, r, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.fill();
 
     }
 
