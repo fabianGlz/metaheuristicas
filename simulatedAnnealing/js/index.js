@@ -23,17 +23,15 @@ function CreateNodes(nCities) {
     for (let i = 0; i < 1000; i++) {
         x = Math.random() * (Max - Min) + Min
         y = Math.random() * (Max - Min) + Min
-        if (i  <  6){
-            
-            Coordinates.X = x;
-            Coordinates.Y = y;
-            Nodes.push(Coordinates)  
-            console.log(Nodes[i].X, Nodes[i].Y)
-        }
-      
-    }
-    Nodes[nCities] = Nodes[0];
 
+        if (i < 5) {
+            Nodes[i].X = x;
+            Nodes[i].Y = y;
+            console.log(Nodes[i].X, Nodes[i].Y);
+
+        }
+    }
       
+Nodes.forEach(nodo =>{console.log(nodo.X, nodo.Y)})
 
 }
